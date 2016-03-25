@@ -14,11 +14,13 @@ using Wolfje.Plugins.Jist.Framework;
 using Terraria;
 using TShockAPI;
 
-namespace Wolfje.Plugins.Jist.stdlib {
-    public class std : stdlib_base {
+namespace Wolfje.Plugins.Jist.stdlib
+{
+    public class std : stdlib_base
+    {
         protected readonly Random randomGenerator = new Random();
         protected readonly object __rndLock = new object();
-		protected readonly Regex csvRegex = new Regex("(?<=^|,)(\"(?:[^\"]|\"\")*\"|[^,]*)");
+        protected readonly Regex csvRegex = new Regex("(?<=^|,)(\"(?:[^\"]|\"\")*\"|[^,]*)");
 
         public std(JistEngine engine)
             : base(engine)
@@ -35,7 +37,8 @@ namespace Wolfje.Plugins.Jist.stdlib {
         {
             int from = Convert.ToInt32(From);
             int to = Convert.ToInt32(To);
-            lock (__rndLock) {
+            lock (__rndLock)
+            {
                 return randomGenerator.Next(from, to);
             }
         }
@@ -47,36 +50,39 @@ namespace Wolfje.Plugins.Jist.stdlib {
         [JavascriptFunction("jist_repeat")]
         public void Repeat(int times, JsValue func)
         {
-            for (int i = 0; i < times; i++) {
+            for (int i = 0; i < times; i++)
+            {
                 engine.CallFunction(func, null, i);
             }
         }
 
-    
-		/// <summary>
-		/// Execute the specified file.
-		/// </summary>
-		/// <param name="file">File.</param>
-		[JavascriptFunction("jist_execute")]
-		public void Execute(string file)
-		{
-			
-		}
 
-		[JavascriptFunction("jist_for_each_item")]
-		public void ForEachItem(JsValue func)
-		{
+        /// <summary>
+        /// Execute the specified file.
+        /// </summary>
+        /// <param name="file">File.</param>
+        [JavascriptFunction("jist_execute")]
+        public void Execute(string file)
+        {
 
-			for (var i = -48; i < Main.maxItemTypes; i++) {
-				var item = TShock.Utils.GetItemById(i);
+        }
 
-				if (item == null) {
-					continue;
-				}
+        [JavascriptFunction("jist_for_each_item")]
+        public void ForEachItem(JsValue func)
+        {
 
-				engine.CallFunction(func, null, i, item);
-			}
-		}
+            for (var i = -48; i < Main.maxItemTypes; i++)
+            {
+                var item = TShock.Utils.GetItemById(i);
+
+                if (item == null)
+                {
+                    continue;
+                }
+
+                engine.CallFunction(func, null, i, item);
+            }
+        }
 
 
         /// <summary>
@@ -88,8 +94,10 @@ namespace Wolfje.Plugins.Jist.stdlib {
         [JavascriptFunction("jist_for_each_player")]
         public void ForEachOnlinePlayer(JsValue func)
         {
-            foreach (var player in TShockAPI.TShock.Players) {
-                if (player == null) {
+            foreach (var player in TShockAPI.TShock.Players)
+            {
+                if (player == null)
+                {
                     continue;
                 }
 
@@ -97,77 +105,87 @@ namespace Wolfje.Plugins.Jist.stdlib {
             }
         }
 
-		[JavascriptFunction("jist_for_each_command")]
-		public void ForEachComand(JsValue Func)
-		{
-			var qCommands = from i in TShockAPI.Commands.ChatCommands
-				let g = TShock.Groups.Where(gr => gr.HasPermission(i.Permissions.FirstOrDefault()))
-			                select new {
-								name = i.Name,
-								permissions = string.Join(",", i.Permissions),
-				gr = string.Join(" ", g.Select(asd => asd.Name))
-							};
+        [JavascriptFunction("jist_for_each_command")]
+        public void ForEachComand(JsValue Func)
+        {
+            var qCommands = from i in TShockAPI.Commands.ChatCommands
+                            let g = TShock.Groups.Where(gr => gr.HasPermission(i.Permissions.FirstOrDefault()))
+                            select new
+                            {
+                                name = i.Name,
+                                permissions = string.Join(",", i.Permissions),
+                                gr = string.Join(" ", g.Select(asd => asd.Name))
+                            };
 
-			foreach (var command in qCommands) {
-				engine.CallFunction(Func, null, command);
-			}
-		}
+            foreach (var command in qCommands)
+            {
+                engine.CallFunction(Func, null, command);
+            }
+        }
 
-		[JavascriptFunction("jist_file_append")]
-		public void FileAppend(string fileName, string text)
-		{
-			System.IO.File.AppendAllText(fileName, text + "\r\n");
-		}
+        [JavascriptFunction("jist_file_append")]
+        public void FileAppend(string fileName, string text)
+        {
+            System.IO.File.AppendAllText(fileName, text + "\r\n");
+        }
 
-		[JavascriptFunction("jist_file_delete")]
-		public void FileDelete(string filePath)
-		{
-			System.IO.File.Delete(filePath);
-		}
+        [JavascriptFunction("jist_file_delete")]
+        public void FileDelete(string filePath)
+        {
+            System.IO.File.Delete(filePath);
+        }
 
-		[JavascriptFunction("jist_cwd")]
-		public string CurrentWorkingDirectory()
-		{
-			return Environment.CurrentDirectory;
-		}
+        [JavascriptFunction("jist_cwd")]
+        public string CurrentWorkingDirectory()
+        {
+            return Environment.CurrentDirectory;
+        }
 
-		[JavascriptFunction("jist_file_read")]
-		public void FileRead(string filePath, JsValue func)
-		{
-			int i = 0;
-			bool hasChanged = false;
-			string[] contents;
+        [JavascriptFunction("jist_file_read")]
+        public void FileRead(string filePath, JsValue func)
+        {
+            int i = 0;
+            bool hasChanged = false;
+            string[] contents;
 
-			foreach (string line in (contents = System.IO.File.ReadAllLines(filePath))) {
-				string l = line.Trim();
+            foreach (string line in (contents = System.IO.File.ReadAllLines(filePath)))
+            {
+                string l = line.Trim();
 
-				if (string.IsNullOrEmpty(line.Trim()) == true) {
-					continue;
-				}
+                if (string.IsNullOrEmpty(line.Trim()) == true)
+                {
+                    continue;
+                }
 
-				bool stop = false;
+                bool stop = false;
 
-				try {
-					engine.CallFunction(func, null, i, line.Trim(), stop);
-				} catch {
-					break;
-				}
+                try
+                {
+                    engine.CallFunction(func, null, i, line.Trim(), stop);
+                }
+                catch
+                {
+                    break;
+                }
 
-				if (line.Trim() != l) {
-					hasChanged = true;
-				}
+                if (line.Trim() != l)
+                {
+                    hasChanged = true;
+                }
 
-				if (stop == true) {
-					break;
-				}
+                if (stop == true)
+                {
+                    break;
+                }
 
-				i++;
-			}
+                i++;
+            }
 
-			if (hasChanged && contents != null) {
-				System.IO.File.WriteAllLines(filePath, contents);
-			}
-		}
+            if (hasChanged && contents != null)
+            {
+                System.IO.File.WriteAllLines(filePath, contents);
+            }
+        }
 
         /// <summary>
         /// JS function: jist_player_count()
@@ -178,53 +196,63 @@ namespace Wolfje.Plugins.Jist.stdlib {
         [JavascriptFunction("jist_player_count")]
         public int OnlinePlayerCount()
         {
-            try {
+            try
+            {
                 return TShockAPI.TShock.Players.Count(i => i != null);
-            } catch {
+            }
+            catch
+            {
                 return -1;
             }
         }
 
-		[JavascriptFunction("jist_file_read_lines")]
-		public string[] FileReadLines(string path)
-		{
-			string[] lines;
+        [JavascriptFunction("jist_file_read_lines")]
+        public string[] FileReadLines(string path)
+        {
+            string[] lines;
 
-			if (File.Exists(path) == false) {
-				return null;
-			}
+            if (File.Exists(path) == false)
+            {
+                return null;
+            }
 
-			try {
-				lines = File.ReadAllLines(path);
-			} catch {
-				return null;
-			}
+            try
+            {
+                lines = File.ReadAllLines(path);
+            }
+            catch
+            {
+                return null;
+            }
 
-			return lines;
-		}
+            return lines;
+        }
 
-		[JavascriptFunction("jist_parse_csv")]
-		public string[] ReadCSV(string line)
-		{
-			MatchCollection matches;
-			Match match;
-			string[] lines;
+        [JavascriptFunction("jist_parse_csv")]
+        public string[] ReadCSV(string line)
+        {
+            MatchCollection matches;
+            Match match;
+            string[] lines;
 
-			if (string.IsNullOrEmpty(line) == true
-				|| (matches = csvRegex.Matches(line)) == null) {
-				return null;
-			}
+            if (string.IsNullOrEmpty(line) == true
+                || (matches = csvRegex.Matches(line)) == null)
+            {
+                return null;
+            }
 
-			lines = new string[matches.Count];
-			for (int i = 0; i < lines.Length; i++) {
-				if ((match = matches[i]) == null) {
-					continue;
-				}
+            lines = new string[matches.Count];
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if ((match = matches[i]) == null)
+                {
+                    continue;
+                }
 
-				lines[i] = match.Value;
-			}
+                lines[i] = match.Value;
+            }
 
-			return lines;
-		}
+            return lines;
+        }
     }
 }

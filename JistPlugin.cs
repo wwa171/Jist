@@ -45,11 +45,6 @@ namespace Wolfje.Plugins.Jist {
 				if (Instance == null) {
 					return;
 				}
-
-				foreach (var property in Instance.DumpGlobalEnvironment().OrderBy(i => i.Key)) {
-					args.Player.SendInfoMessage("{0}: {1}", property.Key,
-						property.Value.Get.HasValue == false ? "undefined" : property.Value.Get.Value.ToString());
-				}
 			} else if (args.Parameters[0].Equals("dumptasks", StringComparison.CurrentCultureIgnoreCase)) {
 				foreach (Wolfje.Plugins.Jist.stdlib.RecurringFunction recur in Instance.stdTask.DumpTasks().OrderBy(i => i.NextRunTime)) {
 					args.Player.SendInfoMessage(recur.ToString());
