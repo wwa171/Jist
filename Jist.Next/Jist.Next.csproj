@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\typescript.js.gz" />
+    <EmbeddedResource Include="Scripts\tsconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jint" Version="2.11.58" />
+    <PackageReference Include="jint.commonjs" Version="1.0.7" />
+  </ItemGroup>
+</Project>
