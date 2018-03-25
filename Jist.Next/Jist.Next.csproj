@@ -12,6 +12,6 @@
 
   <ItemGroup>
     <PackageReference Include="jint" Version="2.11.58" />
-    <PackageReference Include="jint.commonjs" Version="1.0.7" />
+    <PackageReference Include="jint.commonjs" Version="1.0.9" />
   </ItemGroup>
 </Project>
