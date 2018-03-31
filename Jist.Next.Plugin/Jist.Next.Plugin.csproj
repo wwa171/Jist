@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PreserveCompilationContext>false</PreserveCompilationContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BinReferences\OTAPI.dll" />
+    <Reference Include="BinReferences\TerrariaServer.exe" />
+    <Reference Include="BinReferences\ServerPlugins\TShockAPI.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jist.Next\Jist.Next.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\index.ts" />
+    <EmbeddedResource Include="Lib\jist.d.ts" />
+    <EmbeddedResource Include="Lib\tshock.d.ts" />
+    <EmbeddedResource Include="Lib\otapi.d.ts" />
+  </ItemGroup>
+
+  <Target Name="AfterCompile" AfterTargets="PostBuildEvent">
+    <Message Importance="high" Text="Test Message" />
+    <Exec Command="afterBuild" />
+  </Target>
+</Project>

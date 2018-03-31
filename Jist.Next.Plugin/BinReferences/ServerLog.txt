@@ -1,0 +1,861 @@
+[03/31/18 17:00:40] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:00:40] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:00:40] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:00:40] [Server API] Verbose: 	Mono: False
+[03/31/18 17:00:40] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:01:38] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:01:38] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe"
+[03/31/18 17:01:38] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:01:38] [Server API] Verbose: 	Mono: False
+[03/31/18 17:01:39] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:03:16] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:03:16] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe"
+[03/31/18 17:03:16] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:03:16] [Server API] Verbose: 	Mono: False
+[03/31/18 17:03:16] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:05:25] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:05:25] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:05:25] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:05:25] [Server API] Verbose: 	Mono: False
+[03/31/18 17:05:25] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:06:09] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:06:09] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:06:09] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:06:09] [Server API] Verbose: 	Mono: False
+[03/31/18 17:06:09] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Failed to load assembly "Jist.Next.Plugin.dll". ---> System.InvalidOperationException: Could not create an instance of plugin class "Jist.Next.Plugin.Plugin". ---> System.MissingMethodException: Constructor on type 'Jist.Next.Plugin.Plugin' not found.
+   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   at System.Activator.CreateInstance(Type type, Object[] args)
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 17:06:39] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:06:39] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:06:39] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:06:39] [Server API] Verbose: 	Mono: False
+[03/31/18 17:06:39] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:06:39] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:13:39] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:13:39] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:13:39] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:13:39] [Server API] Verbose: 	Mono: False
+[03/31/18 17:13:39] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Failed to load assembly "Jist.Next.Plugin.dll". ---> System.InvalidOperationException: Could not create an instance of plugin class "Jist.Next.Plugin.Plugin". ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Jint, Version=0.0.0.0, Culture=neutral, PublicKeyToken=2e92ba9c8d81157f' or one of its dependencies. The system cannot find the file specified.
+   at Jist.Next.Jist..ctor(String scriptsDirectory)
+   at Jist.Next.Plugin.Plugin..ctor(Main game)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   at System.Activator.CreateInstance(Type type, Object[] args)
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 17:22:01] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:22:01] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:22:01] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:22:01] [Server API] Verbose: 	Mono: False
+[03/31/18 17:22:03] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:22:03] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:23:16] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:23:16] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:23:16] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:23:16] [Server API] Verbose: 	Mono: False
+[03/31/18 17:23:18] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:23:18] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:33:01] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:33:01] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:33:01] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:33:01] [Server API] Verbose: 	Mono: False
+[03/31/18 17:33:03] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:33:03] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:34:22] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:34:22] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:34:22] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:34:22] [Server API] Verbose: 	Mono: False
+[03/31/18 17:34:23] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:34:23] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:41:18] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:41:18] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:41:18] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:41:18] [Server API] Verbose: 	Mono: False
+[03/31/18 17:41:19] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:41:19] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:41:49] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:41:49] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:41:49] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:41:49] [Server API] Verbose: 	Mono: False
+[03/31/18 17:41:50] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:41:50] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:42:46] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:42:46] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:42:46] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:42:46] [Server API] Verbose: 	Mono: False
+[03/31/18 17:42:48] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:42:48] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:43:50] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:43:50] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:43:50] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:43:50] [Server API] Verbose: 	Mono: False
+[03/31/18 17:43:51] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:43:51] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:45:49] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:45:49] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:45:49] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:45:49] [Server API] Verbose: 	Mono: False
+[03/31/18 17:45:50] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:45:50] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:47:12] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:47:12] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:47:12] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:47:12] [Server API] Verbose: 	Mono: False
+[03/31/18 17:47:13] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:47:14] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 17:48:06] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 17:48:06] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 17:48:06] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 17:48:06] [Server API] Verbose: 	Mono: False
+[03/31/18 17:48:07] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 17:48:07] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> Jint.Runtime.JavaScriptException: console is not defined
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 18:09:34] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:09:34] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:09:34] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:09:34] [Server API] Verbose: 	Mono: False
+[03/31/18 18:09:36] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:09:36] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 18:17:24] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:17:24] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:17:24] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:17:24] [Server API] Verbose: 	Mono: False
+[03/31/18 18:17:25] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:17:25] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: stream
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at System.IO.StreamReader..ctor(Stream stream)
+   at Jist.Next.Plugin.Plugin.LoadInternalModules()
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 18:17:42] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:17:42] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:17:42] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:17:42] [Server API] Verbose: 	Mono: False
+[03/31/18 18:17:43] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:17:43] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: stream
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at System.IO.StreamReader..ctor(Stream stream)
+   at Jist.Next.Plugin.Plugin.LoadInternalModules()
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 18:19:58] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:19:58] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:19:58] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:19:58] [Server API] Verbose: 	Mono: False
+[03/31/18 18:19:59] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:19:59] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 18:21:18] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:21:18] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:21:18] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:21:18] [Server API] Verbose: 	Mono: False
+[03/31/18 18:21:20] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:21:20] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 18:26:39] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:26:39] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:26:39] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:26:39] [Server API] Verbose: 	Mono: False
+[03/31/18 18:26:40] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:26:40] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 18:26:55] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:26:55] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:26:55] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:26:55] [Server API] Verbose: 	Mono: False
+[03/31/18 18:26:57] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:26:57] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 18:27:17] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:27:17] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:27:17] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:27:17] [Server API] Verbose: 	Mono: False
+[03/31/18 18:27:18] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:27:18] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 18:33:48] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:33:48] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:33:48] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:33:48] [Server API] Verbose: 	Mono: False
+[03/31/18 18:33:49] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:33:49] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 18:36:03] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:36:03] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:36:03] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:36:03] [Server API] Verbose: 	Mono: False
+[03/31/18 18:36:05] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:36:05] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 18:38:39] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 18:38:39] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 18:38:39] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 18:38:39] [Server API] Verbose: 	Mono: False
+[03/31/18 18:38:40] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 18:38:41] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 21:59:15] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 21:59:15] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 21:59:15] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 21:59:15] [Server API] Verbose: 	Mono: False
+[03/31/18 21:59:16] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 21:59:16] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 22:00:54] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 22:00:54] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 22:00:54] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 22:00:54] [Server API] Verbose: 	Mono: False
+[03/31/18 22:00:56] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 22:00:56] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 22:04:30] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 22:04:30] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 22:04:30] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 22:04:30] [Server API] Verbose: 	Mono: False
+[03/31/18 22:04:31] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 22:04:32] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 22:07:40] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 22:07:40] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 22:07:40] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 22:07:40] [Server API] Verbose: 	Mono: False
+[03/31/18 22:07:42] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 22:07:42] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> Jint.Runtime.JavaScriptException: player is null
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 22:08:34] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 22:08:34] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 22:08:34] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 22:08:34] [Server API] Verbose: 	Mono: False
+[03/31/18 22:08:35] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 22:08:35] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> Jint.Runtime.JavaScriptException: player is null
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 22:09:21] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 22:09:21] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 22:09:21] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 22:09:21] [Server API] Verbose: 	Mono: False
+[03/31/18 22:09:23] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 22:09:23] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 22:10:26] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 22:10:26] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 22:10:26] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 22:10:26] [Server API] Verbose: 	Mono: False
+[03/31/18 22:10:28] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 22:10:28] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 22:35:20] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 22:35:20] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 22:35:20] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 22:35:20] [Server API] Verbose: 	Mono: False
+[03/31/18 22:35:22] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 22:35:22] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 22:37:58] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 22:37:58] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 22:37:58] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 22:37:58] [Server API] Verbose: 	Mono: False
+[03/31/18 22:38:00] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 22:38:00] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:08:02] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:08:02] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:08:02] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:08:02] [Server API] Verbose: 	Mono: False
+[03/31/18 23:08:03] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:08:03] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:08:21] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:08:21] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:08:21] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:08:21] [Server API] Verbose: 	Mono: False
+[03/31/18 23:08:22] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:08:22] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:09:59] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:09:59] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:09:59] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:09:59] [Server API] Verbose: 	Mono: False
+[03/31/18 23:10:00] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:10:00] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:10:54] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:10:54] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:10:54] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:10:54] [Server API] Verbose: 	Mono: False
+[03/31/18 23:10:56] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:10:56] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Invoke(MethodInfo[] methodInfos, JsValue thisObject, JsValue[] jsArguments)
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Call(JsValue thisObject, JsValue[] arguments)
+   at Jint.Runtime.ExpressionInterpreter.EvaluateCallExpression(CallExpression callExpression)
+   at Jint.Engine.EvaluateExpression(Expression expression)
+   at Jint.Runtime.StatementInterpreter.ExecuteExpressionStatement(ExpressionStatement expressionStatement)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Runtime.StatementInterpreter.ExecuteStatementList(IEnumerable`1 statementList)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 23:14:32] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:14:32] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:14:32] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:14:32] [Server API] Verbose: 	Mono: False
+[03/31/18 23:14:33] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:14:33] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Invoke(MethodInfo[] methodInfos, JsValue thisObject, JsValue[] jsArguments)
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Call(JsValue thisObject, JsValue[] arguments)
+   at Jint.Runtime.ExpressionInterpreter.EvaluateCallExpression(CallExpression callExpression)
+   at Jint.Engine.EvaluateExpression(Expression expression)
+   at Jint.Runtime.StatementInterpreter.ExecuteExpressionStatement(ExpressionStatement expressionStatement)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Runtime.StatementInterpreter.ExecuteStatementList(IEnumerable`1 statementList)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 23:15:38] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:15:38] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:15:38] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:15:38] [Server API] Verbose: 	Mono: False
+[03/31/18 23:15:39] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:15:39] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Invoke(MethodInfo[] methodInfos, JsValue thisObject, JsValue[] jsArguments)
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Call(JsValue thisObject, JsValue[] arguments)
+   at Jint.Runtime.ExpressionInterpreter.EvaluateCallExpression(CallExpression callExpression)
+   at Jint.Engine.EvaluateExpression(Expression expression)
+   at Jint.Runtime.StatementInterpreter.ExecuteExpressionStatement(ExpressionStatement expressionStatement)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Runtime.StatementInterpreter.ExecuteStatementList(IEnumerable`1 statementList)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 23:16:38] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:16:38] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:16:38] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:16:38] [Server API] Verbose: 	Mono: False
+[03/31/18 23:16:39] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:16:39] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Invoke(MethodInfo[] methodInfos, JsValue thisObject, JsValue[] jsArguments)
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Call(JsValue thisObject, JsValue[] arguments)
+   at Jint.Runtime.ExpressionInterpreter.EvaluateCallExpression(CallExpression callExpression)
+   at Jint.Engine.EvaluateExpression(Expression expression)
+   at Jint.Runtime.StatementInterpreter.ExecuteExpressionStatement(ExpressionStatement expressionStatement)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Runtime.StatementInterpreter.ExecuteStatementList(IEnumerable`1 statementList)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 23:19:04] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:19:04] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:19:04] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:19:04] [Server API] Verbose: 	Mono: False
+[03/31/18 23:19:05] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:19:05] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:19:53] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:19:53] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:19:53] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:19:53] [Server API] Verbose: 	Mono: False
+[03/31/18 23:19:54] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:19:54] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:21:29] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:21:29] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:21:29] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:21:29] [Server API] Verbose: 	Mono: False
+[03/31/18 23:21:30] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:21:30] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:22:14] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:22:14] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:22:14] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:22:14] [Server API] Verbose: 	Mono: False
+[03/31/18 23:22:15] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:22:15] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Invoke(MethodInfo[] methodInfos, JsValue thisObject, JsValue[] jsArguments)
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Call(JsValue thisObject, JsValue[] arguments)
+   at Jint.Runtime.ExpressionInterpreter.EvaluateCallExpression(CallExpression callExpression)
+   at Jint.Engine.EvaluateExpression(Expression expression)
+   at Jint.Runtime.StatementInterpreter.ExecuteExpressionStatement(ExpressionStatement expressionStatement)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Runtime.StatementInterpreter.ExecuteStatementList(IEnumerable`1 statementList)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 23:23:18] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:23:18] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:23:18] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:23:18] [Server API] Verbose: 	Mono: False
+[03/31/18 23:23:19] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:23:19] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Invoke(MethodInfo[] methodInfos, JsValue thisObject, JsValue[] jsArguments)
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Call(JsValue thisObject, JsValue[] arguments)
+   at Jint.Runtime.ExpressionInterpreter.EvaluateCallExpression(CallExpression callExpression)
+   at Jint.Engine.EvaluateExpression(Expression expression)
+   at Jint.Runtime.StatementInterpreter.ExecuteExpressionStatement(ExpressionStatement expressionStatement)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Runtime.StatementInterpreter.ExecuteStatementList(IEnumerable`1 statementList)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.CommonJS.Module.Compile(String sourceCode, String filePath)
+   at Jist.Next.Jist.TranspileModule(String path, IModule module)
+   at Jint.CommonJS.Module..ctor(ModuleLoadingEngine e, String moduleId, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.Plugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[03/31/18 23:24:21] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:24:21] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:24:21] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:24:21] [Server API] Verbose: 	Mono: False
+[03/31/18 23:24:22] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:24:22] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:24:22] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its GameInitialize handlers: 
+System.Reflection.TargetParameterCountException: Parameter count mismatch.
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at System.Delegate.DynamicInvoke(Object[] args)
+   at Jist.Next.Lib.Jist.<>c__DisplayClass4_0.<.cctor>b__1(EventArgs args)
+   at TerrariaApi.Server.HandlerCollection`1.Invoke(ArgsType args)
+[03/31/18 23:25:10] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:25:10] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:25:10] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:25:10] [Server API] Verbose: 	Mono: False
+[03/31/18 23:25:11] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:25:11] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:25:11] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its GameInitialize handlers: 
+System.Reflection.TargetParameterCountException: Parameter count mismatch.
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at System.Delegate.DynamicInvoke(Object[] args)
+   at Jist.Next.Lib.Jist.<>c__DisplayClass4_0.<.cctor>b__1(EventArgs args)
+   at TerrariaApi.Server.HandlerCollection`1.Invoke(ArgsType args)
+[03/31/18 23:26:14] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:26:14] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:26:14] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:26:14] [Server API] Verbose: 	Mono: False
+[03/31/18 23:26:15] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:26:15] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:35:52] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:35:52] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:35:52] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:35:52] [Server API] Verbose: 	Mono: False
+[03/31/18 23:35:54] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:35:54] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:37:36] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:37:36] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:37:36] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:37:36] [Server API] Verbose: 	Mono: False
+[03/31/18 23:37:37] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:37:37] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[03/31/18 23:39:26] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[03/31/18 23:39:26] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[03/31/18 23:39:26] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[03/31/18 23:39:26] [Server API] Verbose: 	Mono: False
+[03/31/18 23:39:27] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[03/31/18 23:39:27] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:14:45] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:14:45] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:14:45] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:14:45] [Server API] Verbose: 	Mono: False
+[04/01/18 00:14:46] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:14:46] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:40:05] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:40:05] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:40:05] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:40:05] [Server API] Verbose: 	Mono: False
+[04/01/18 00:40:07] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:40:07] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:41:59] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:41:59] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:41:59] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:41:59] [Server API] Verbose: 	Mono: False
+[04/01/18 00:42:00] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:42:00] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:42:33] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 00:43:43] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:43:43] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:43:43] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:43:43] [Server API] Verbose: 	Mono: False
+[04/01/18 00:43:45] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:43:45] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:44:29] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:44:29] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:44:29] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:44:29] [Server API] Verbose: 	Mono: False
+[04/01/18 00:44:31] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:44:31] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:46:25] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:46:25] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:46:25] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:46:25] [Server API] Verbose: 	Mono: False
+[04/01/18 00:46:27] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:46:27] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:46:38] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: TSPlayer is undefined
+[04/01/18 00:53:27] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:53:27] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:53:27] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:53:27] [Server API] Verbose: 	Mono: False
+[04/01/18 00:53:29] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:53:29] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:55:44] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:55:44] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:55:44] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:55:44] [Server API] Verbose: 	Mono: False
+[04/01/18 00:55:46] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:55:46] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 00:56:16] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 00:56:16] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 00:56:16] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 00:56:16] [Server API] Verbose: 	Mono: False
+[04/01/18 00:56:18] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 00:56:18] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:04:01] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:04:01] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:04:01] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:04:01] [Server API] Verbose: 	Mono: False
+[04/01/18 01:04:02] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:04:03] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:04:14] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+ReferenceError: TShockAPI is not defined
+[04/01/18 01:06:07] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:06:07] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:06:07] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:06:07] [Server API] Verbose: 	Mono: False
+[04/01/18 01:06:08] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:06:08] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:06:47] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:06:47] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:06:47] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:06:47] [Server API] Verbose: 	Mono: False
+[04/01/18 01:06:49] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:06:49] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:06:59] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+ReferenceError: TShockAPI is not defined
+[04/01/18 01:07:18] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:07:18] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:07:18] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:07:18] [Server API] Verbose: 	Mono: False
+[04/01/18 01:07:20] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:07:20] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:07:32] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 01:08:12] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:08:12] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:08:12] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:08:12] [Server API] Verbose: 	Mono: False
+[04/01/18 01:08:14] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:08:14] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:08:24] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 01:08:55] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:08:55] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:08:55] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:08:55] [Server API] Verbose: 	Mono: False
+[04/01/18 01:08:59] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:08:59] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:09:06] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 01:09:38] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:09:38] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:09:38] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:09:38] [Server API] Verbose: 	Mono: False
+[04/01/18 01:09:40] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:09:40] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:09:51] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 01:23:06] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:23:06] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:23:06] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:23:06] [Server API] Verbose: 	Mono: False
+[04/01/18 01:23:08] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:23:08] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:26:35] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:26:35] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:26:35] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:26:35] [Server API] Verbose: 	Mono: False
+[04/01/18 01:26:36] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:26:37] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:27:16] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:27:16] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:27:16] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:27:16] [Server API] Verbose: 	Mono: False
+[04/01/18 01:27:17] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:27:17] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:28:28] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:28:28] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:28:28] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:28:28] [Server API] Verbose: 	Mono: False
+[04/01/18 01:28:29] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:28:29] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:29:20] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:29:20] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:29:20] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:29:20] [Server API] Verbose: 	Mono: False
+[04/01/18 01:29:22] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:29:22] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:32:02] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:32:02] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:32:02] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:32:02] [Server API] Verbose: 	Mono: False
+[04/01/18 01:32:03] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:32:03] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:32:29] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:32:29] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:32:29] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:32:29] [Server API] Verbose: 	Mono: False
+[04/01/18 01:32:30] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:32:30] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:40:19] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:40:19] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:40:19] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:40:19] [Server API] Verbose: 	Mono: False
+[04/01/18 01:40:21] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:40:21] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:40:35] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 01:45:38] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:45:38] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:45:38] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:45:38] [Server API] Verbose: 	Mono: False
+[04/01/18 01:45:39] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:45:39] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.JistPlugin.Reload()
+   at Jist.Next.Plugin.JistPlugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[04/01/18 01:45:58] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:45:58] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:45:58] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:45:58] [Server API] Verbose: 	Mono: False
+[04/01/18 01:46:00] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:46:00] [Server API] Error: Startup aborted due to an exception in the Server API initialization:
+System.InvalidOperationException: Plugin "Jist Next" has thrown an exception during initialization. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Jint.CommonJS.ModuleLoadingEngine.Load(String moduleName, Module parent)
+   at Jint.CommonJS.ModuleLoadingEngine.RunMain(String mainModuleName)
+   at Jist.Next.Plugin.JistPlugin.Reload()
+   at Jist.Next.Plugin.JistPlugin.Initialize()
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   --- End of inner exception stack trace ---
+   at TerrariaApi.Server.ServerApi.LoadPlugins()
+   at TerrariaApi.Server.ServerApi.Initialize(String[] commandLineArgs, Main game)
+   at TerrariaApi.Server.HookManager.InitialiseAPI()
+[04/01/18 01:46:07] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:46:07] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:46:07] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:46:07] [Server API] Verbose: 	Mono: False
+[04/01/18 01:46:08] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:46:09] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:47:58] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 01:47:58] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 01:47:58] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 01:47:58] [Server API] Verbose: 	Mono: False
+[04/01/18 01:48:00] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 01:48:00] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 01:48:07] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 02:00:48] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:00:49] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:00:49] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:00:49] [Server API] Verbose: 	Mono: False
+[04/01/18 02:00:50] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:00:50] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:01:04] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 02:04:35] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:04:35] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:04:35] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:04:35] [Server API] Verbose: 	Mono: False
+[04/01/18 02:04:36] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:04:37] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:05:40] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerChat handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 02:05:47] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerChat handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 02:06:52] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:06:52] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:06:52] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:06:52] [Server API] Verbose: 	Mono: False
+[04/01/18 02:06:54] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:06:54] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:07:28] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerChat handlers: 
+TypeError: No public methods with the specified arguments were found.
+[04/01/18 02:07:55] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerChat handlers: 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: format
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Invoke(MethodInfo[] methodInfos, JsValue thisObject, JsValue[] jsArguments)
+   at Jint.Runtime.Interop.MethodInfoFunctionInstance.Call(JsValue thisObject, JsValue[] arguments)
+   at Jint.Runtime.ExpressionInterpreter.EvaluateCallExpression(CallExpression callExpression)
+   at Jint.Engine.EvaluateExpression(Expression expression)
+   at Jint.Runtime.StatementInterpreter.ExecuteExpressionStatement(ExpressionStatement expressionStatement)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Runtime.StatementInterpreter.ExecuteStatementList(IEnumerable`1 statementList)
+   at Jint.Engine.ExecuteStatement(Statement statement)
+   at Jint.Native.Function.ScriptFunctionInstance.Call(JsValue thisArg, JsValue[] arguments)
+   at Jint.Native.JsValue.Invoke(JsValue thisObj, JsValue[] arguments)
+   at Jist.Next.Lib.Jist.<>c__DisplayClass7_4.<.cctor>b__14(ServerChatEventArgs args)
+   at TerrariaApi.Server.HandlerCollection`1.Invoke(ArgsType args)
+[04/01/18 02:13:04] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerChat handlers: 
+TypeError: Invalid generic type parameter
+[04/01/18 02:20:50] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerChat handlers: 
+TypeError: Invalid generic type parameter
+[04/01/18 02:24:21] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerChat handlers: 
+TypeError: Invalid generic type parameter
+[04/01/18 02:24:23] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerChat handlers: 
+TypeError: Invalid generic type parameter
+[04/01/18 02:27:36] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:27:36] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:27:36] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:27:36] [Server API] Verbose: 	Mono: False
+[04/01/18 02:27:38] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:27:38] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:28:23] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:28:23] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:28:23] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:28:23] [Server API] Verbose: 	Mono: False
+[04/01/18 02:28:24] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:28:25] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:34:32] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:34:32] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:34:32] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:34:32] [Server API] Verbose: 	Mono: False
+[04/01/18 02:34:34] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:34:34] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:34:45] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: TShock is undefined
+[04/01/18 02:35:44] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:35:44] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:35:44] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:35:44] [Server API] Verbose: 	Mono: False
+[04/01/18 02:35:46] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:35:46] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:44:17] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:44:17] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:44:17] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:44:17] [Server API] Verbose: 	Mono: False
+[04/01/18 02:44:18] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:44:19] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:45:47] [Server API] Warning: Plugin "Jist Next" has had an unhandled exception thrown by one of its ServerJoin handlers: 
+TypeError: TShock is undefined
+[04/01/18 02:46:22] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:46:22] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:46:22] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:46:22] [Server API] Verbose: 	Mono: False
+[04/01/18 02:46:24] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:46:24] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.
+[04/01/18 02:48:48] [Server API] Verbose: TerrariaApi - Server v2.1.0.0 started.
+[04/01/18 02:48:48] [Server API] Verbose: 	Command line: "C:\src\Jist\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" 
+[04/01/18 02:48:48] [Server API] Verbose: 	OS: Microsoft Windows NT 6.2.9200.0 (64bit: True)
+[04/01/18 02:48:48] [Server API] Verbose: 	Mono: False
+[04/01/18 02:48:49] [Server API] Info: Plugin TShock v4.3.25.0 (by The TShock Team) initiated.
+[04/01/18 02:48:50] [Server API] Info: Plugin Jist Next v1.0.0.0 (by Tyler W) initiated.

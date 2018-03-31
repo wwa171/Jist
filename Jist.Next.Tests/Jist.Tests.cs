@@ -39,6 +39,6 @@ public class JistTests
 
         var jist = new Jist.Next.Jist(Path.GetTempPath());
 
-        Assert.Throws<Exception>(() => jist.ModuleLoadingEngine.RunMain("./error-ts"));
+        Assert.Throws<AggregateException>(() => jist.ModuleLoadingEngine.RunMain("./error-ts"));
     }
 }

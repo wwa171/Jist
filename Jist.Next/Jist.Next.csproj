@@ -8,6 +8,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Scripts\typescript.js.gz" />
     <EmbeddedResource Include="Scripts\tsconfig.json" />
+    <EmbeddedResource Include="Scripts\README.txt" />
   </ItemGroup>
 
   <ItemGroup>
