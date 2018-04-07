@@ -8,6 +8,7 @@ using Jint.Native;
 using Jint.Native.Array;
 using Jint.Native.Object;
 using Jint.Runtime;
+using Jint.Runtime.Interop;
 
 namespace Jist.Next
 {
@@ -25,6 +26,8 @@ namespace Jist.Next
         {
             ModuleLoadingEngine = Engine.CommonJS();
             ScriptsDirectory = scriptsDirectory;
+
+            Engine.SetValue("Console", TypeReference.CreateTypeReference(Engine, typeof(Console)));
 
             SetupScriptsDirectory();
             LoadTypeScript();

@@ -512,8 +512,3 @@ declare module "tsplayer" {
   let tsplayer: typeof TShockAPI.TSPlayer;
   export = tsplayer;
 }
-
-declare module "commands" {
-  let commands: typeof TShockAPI.Commands;
-  export = commands;
-}

@@ -20,6 +20,13 @@
     <EmbeddedResource Include="Lib\jist.d.ts" />
     <EmbeddedResource Include="Lib\tshock.d.ts" />
     <EmbeddedResource Include="Lib\otapi.d.ts" />
+    <EmbeddedResource Include="Lib\timers.d.ts" />
+    <EmbeddedResource Include="Lib\commands.d.ts" />
+    <EmbeddedResource Include="Lib\cooldown.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.4.1" />
   </ItemGroup>
 
   <Target Name="AfterCompile" AfterTargets="PostBuildEvent">

@@ -101,6 +101,7 @@ namespace Jist.Next.Plugin
         protected void Reload()
         {
             Lib.Jist.ClearHooks();
+            Lib.Timers.ClearAllTimers();
             Jist.ModuleLoadingEngine.ModuleCache.Clear();
             LoadInternalModules();
             Jist.ModuleLoadingEngine.RunMain(JistRoot);
@@ -111,7 +112,6 @@ namespace Jist.Next.Plugin
             // Jist.ModuleLoadingEngine.RegisterInternalModule("tshock", new NamespaceReference(Jist.Engine, "TShockAPI"));
             Jist.ModuleLoadingEngine.RegisterInternalModule("tshock", typeof(TShock));
             Jist.ModuleLoadingEngine.RegisterInternalModule("tsplayer", typeof(TSPlayer));
-            Jist.ModuleLoadingEngine.RegisterInternalModule("commands", typeof(Commands));
 
             WriteTypings(new ModuleAttribute("tshock", "Jist.Next.Plugin.Lib.tshock.d.ts"), typeof(TShockAPI.TShock));
             WriteTypings(new ModuleAttribute("otapi", "Jist.Next.Plugin.Lib.otapi.d.ts"), this.GetType());
@@ -135,8 +135,14 @@ namespace Jist.Next.Plugin
         public void WriteTypings(ModuleAttribute attribute, Type type)
         {
             var typingsPath = Path.Combine(TypingsRoot, $"{attribute.ModuleId}.d.ts");
-            var stream = type.Assembly.GetManifestResourceStream(attribute.TypingsResourceId)
-                ?? this.GetType().Assembly.GetManifestResourceStream(attribute.TypingsResourceId);
+
+            Stream stream = null;
+
+            if (!string.IsNullOrEmpty(attribute.TypingsResourceId))
+            { 
+                stream = type.Assembly.GetManifestResourceStream(attribute.TypingsResourceId)
+                    ?? this.GetType().Assembly.GetManifestResourceStream(attribute.TypingsResourceId);
+            }
 
             if (stream == null)
             {

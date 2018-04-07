@@ -64,6 +64,12 @@ declare namespace Jist {
     export function on(type: 'ServerChat', callback: HookHandler<ServerChatEventArgs>);
     export function on(type: 'NpcSpawn', callback: HookHandler<NpcSpawnEventArgs>);
     export function on(type: 'NpcKilled', callback: HookHandler<NpcKilledEventArgs>);
+
+    /** Generates a random number between the ranges specified, exclusive. */
+    export function random(from: number, to: number): number;
+
+    /** Generates a random number between the ranges specified, inclusive. */
+    export function randomInclusive(from: number, to: number): number;
 }
 
 declare module 'jist' {
