@@ -7,8 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="..\Jist.Next.Plugin\BinReferences\OTAPI.dll" />
+    <Reference Include="..\Jist.Next.Plugin\BinReferences\TerrariaServer.exe" />
+    <Reference Include="..\Jist.Next.Plugin\BinReferences\ServerPlugins\TShockAPI.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="jint" Version="2.11.58" />
-    <PackageReference Include="jint.commonjs" Version="1.0.9" />
+    <PackageReference Include="jint.commonjs" Version="1.0.10" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
@@ -17,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Jist.Next\Jist.Next.csproj" />
+    <ProjectReference Include="..\Jist.Next.Plugin\Jist.Next.Plugin.csproj" />
   </ItemGroup>
 
 </Project>

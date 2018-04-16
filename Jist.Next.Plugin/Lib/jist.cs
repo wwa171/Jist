@@ -12,51 +12,6 @@ namespace Jist.Next.Plugin.Lib
     {
         static readonly ThreadSafeRandom threadSafeRandom = new ThreadSafeRandom();
 
-
-        static Jist()
-        {
-            JistPlugin.Jist.Engine.Execute(@"
-            function inspect(obj, depth) {
-                if (!obj) return;
-
-                var cons = obj.constructor
-                    , name = cons.name
-                    , proto = obj.__proto__
-                    , depth = depth || 0
-                    , indent = Array(depth + 1).join('  ');
-
-                if (0 == depth) {
-                    if ('function' == typeof obj) {
-                    name = '[' + name + ': ' + obj.name + ']';
-                    } else {
-                    name = '[' + name + ']';
-                    }
-                }
-
-                Console.WriteLine(indent + '\033[33m%s\033[0m', name);
-                Object.keys(obj).sort().forEach(function(key){
-                    var desc = Object.getOwnPropertyDescriptor(obj, key);
-                    if (desc.get) Console.WriteLine(indent + '  \033[90m.{0}\033[0m', key);
-                    if (desc.set) Console.WriteLine(indent + '  \033[90m.{0}=\033[0m', key);
-                    if ('function' == typeof desc.value) {
-                    var str = desc.value.toString();
-                    var params = str.match(/^function *\((.*?)\)/)
-                        , val = params
-                        ? params[1].split(/ *, */).map(function(param){
-                            return '\033[0m' + param + '\033[90m';
-                        }).join(', ')
-                        : '';
-                    Console.WriteLine(indent + '  \033[90m.{0}({1})\033[0m', key, val);
-                    } else if (undefined !== desc.value) {
-                        Console.WriteLine(indent + '  \033[90m.{0} {1}\033[0m', key, desc.value);
-                    }
-                });
-
-                inspect(proto, ++depth);
-            };
-");
-        }
-
         static List<Action> unregisters = new List<Action>();
 
         public static Dictionary<string, Action<JsValue>> hookDictionary = new Dictionary<string, Action<JsValue>>()

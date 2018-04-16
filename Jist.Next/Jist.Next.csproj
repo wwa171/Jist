@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,4 +14,14 @@
     <PackageReference Include="jint" Version="2.11.58" />
     <PackageReference Include="jint.commonjs" Version="1.0.10" />
   </ItemGroup>
+
+  <PropertyGroup>
+        <Version></Version>
+        <Description>The next generation of server-sided economy for TShock Servers</Description>
+        <Authors>Tyler Watson</Authors>
+        <PackageProjectUrl>https://github.com/tylerjwatson/Jist/tree/next</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/tylerjwatson/Jist/tree/next</RepositoryUrl>
+        <PackageLicenseUrl>https://github.com/tylerjwatson/Jist/tree/next/LICENSE</PackageLicenseUrl>
+        <PackageTags>seconomy,tshock,jist,terraria</PackageTags>
+  </PropertyGroup>
 </Project>

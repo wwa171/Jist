@@ -13,6 +13,11 @@ namespace Jist.Next.Plugin
 
         public ThreadSafeRandom()
         {
+            threadInit();
+        }
+
+        private void threadInit()
+        {
             if (_local == null)
             {
                 int seed;
@@ -23,18 +28,22 @@ namespace Jist.Next.Plugin
                 _local = new Random(seed);
             }
         }
+
         public int Next()
         {
+            threadInit();
             return _local.Next();
         }
 
         public int Next(int from, int to)
         {
+            threadInit();
             return _local.Next(from, to);
         }
 
         public int NextInclusive(int from, int to)
         {
+            threadInit();
             return _local.Next(from, to + 1);
         }
     }
