@@ -7,7 +7,7 @@ using TShockAPI;
 
 namespace Jist.Next.Plugin.Lib
 {
-    [Module("jist", "Jist.Next.Plugin.Lib.jist.d.ts")]
+    [Module("jist"), TypeDeclaration("Jist.Next.Plugin.Lib.jist.d.ts", "jist.d.ts")]
     public static class Jist
     {
         static readonly ThreadSafeRandom threadSafeRandom = new ThreadSafeRandom();

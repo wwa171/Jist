@@ -11,7 +11,7 @@ namespace Jist.Next.Plugin.Lib
     /// <summary>
     /// Provides JavaScript API for commands with cooldowns.
     /// </summary>
-    [Module("cooldown", "Jist.Next.Plugin.Lib.cooldown.d.ts")]
+    [Module("cooldown"), TypeDeclaration("Jist.Next.Plugin.Lib.cooldown.d.ts", "cooldown.d.ts")]
     public static class Cooldown {
         static readonly List<(TSPlayer player, string key, DateTime timeout)> cooldownDictionary = new List<(TSPlayer player, string key, DateTime timeout)>();
 

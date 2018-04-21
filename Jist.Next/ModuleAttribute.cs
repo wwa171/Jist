@@ -10,15 +10,9 @@ namespace Jist.Next
         /// </summary>
         public string ModuleId { get; }
 
-        /// <summary>
-        /// (optional) Gets the embedded resource ID for the provided typings.
-        /// </summary>
-        public string TypingsResourceId { get; }
-
-        public ModuleAttribute(string moduleId, string typingsResourceId = null)
+        public ModuleAttribute(string moduleId)
         {
             this.ModuleId = moduleId;
-            this.TypingsResourceId = typingsResourceId;
         }
     }
 }

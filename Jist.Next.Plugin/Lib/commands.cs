@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Jist.Next.Plugin.Lib
 {
-    [Module("commands", "Jist.Next.Plugin.Lib.commands.d.ts")]
+    [Module("commands"), TypeDeclaration("Jist.Next.Plugin.Lib.commands.d.ts", "commands.d.ts")]
     public class Commands
     {
         public static void addCommand(dynamic data, TShockAPI.CommandDelegate callback)
@@ -13,6 +13,12 @@ namespace Jist.Next.Plugin.Lib
             object[] permissions = null;
             bool removeExisting = true;
             int? cooldown = null;
+
+            /*
+             * NOTE
+             *
+             * This is garbage code for handling garbage dynamics.
+             */
 
             try
             {

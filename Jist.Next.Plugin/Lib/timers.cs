@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Jist.Next.Plugin.Lib
 {
-    [Module("timers", "Jist.Next.Plugin.Lib.timers.d.ts")]
+    [Module("timers"), TypeDeclaration("Jist.Next.Plugin.Lib.timers.d.ts", "timers.d.ts")]
     public class Timers
     {
         static Dictionary<Guid, CancellationTokenSource> timerTokens = new Dictionary<Guid, CancellationTokenSource>();
