@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="jint" Version="2.11.58" />
-    <PackageReference Include="jint.commonjs" Version="1.0.12" />
+    <PackageReference Include="jint.commonjs" Version="1.0.14" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -24,4 +24,7 @@
         <PackageLicenseUrl>https://github.com/tylerjwatson/Jist/tree/next/LICENSE</PackageLicenseUrl>
         <PackageTags>seconomy,tshock,jist,terraria</PackageTags>
   </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  </Target>
 </Project>

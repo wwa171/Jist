@@ -133,29 +133,30 @@ namespace Jist.Next.Plugin
 
             foreach (var typingsAttr in GetTypingsAttributes())
             {
+                // Console.WriteLine($"write-typings: Intellisense on {typingsAttr.Item2.ResourceId} in ${typingsAttr.Item1.Name}");
                 WriteTypings(typingsAttr);
             }
         }
 
-        public void WriteTypings(string resourceId, string fileName, Type type = null)
+        public void WriteTypings(string resourceId, string fileName)
         {
-            WriteTypings(new TypeDeclarationAttribute(type, resourceId, fileName));
+            WriteTypings((this.GetType(), new TypeDeclarationAttribute(resourceId, fileName)));
         }
 
-        public void WriteTypings(TypeDeclarationAttribute attribute)
+        public void WriteTypings(ValueTuple<Type, TypeDeclarationAttribute> attribute)
         {
-            if (attribute == null)
+            if (attribute.Item2 == null)
             {
                 throw new ArgumentNullException(nameof(attribute));
             }
 
-            var typingsPath = Path.Combine(TypingsRoot, $"{attribute.TypingsFileName}.d.ts");
+            var typingsPath = Path.Combine(TypingsRoot, attribute.Item2.TypingsFileName);
 
             Stream stream = null;
 
-            if (!string.IsNullOrEmpty(attribute.ResourceId))
+            if (!string.IsNullOrEmpty(attribute.Item2.ResourceId))
             {
-                stream = attribute.ResourceType.Assembly.GetManifestResourceStream(attribute.ResourceId);
+                stream = attribute.Item1.Assembly.GetManifestResourceStream(attribute.Item2.ResourceId);
             }
 
             //             if (stream == null)
@@ -182,32 +183,33 @@ namespace Jist.Next.Plugin
         /// <summary>
         /// Generator which yields all the possible typings attribute instances in the process.
         /// </summary>
-        protected IEnumerable<TypeDeclarationAttribute> GetTypingsAttributes()
+        protected IEnumerable<(Type, TypeDeclarationAttribute)> GetTypingsAttributes()
         {
-            foreach (var type in Assembly.GetEntryAssembly().GetTypes())
-            {
-                TypeDeclarationAttribute attr = null;
-                if ((attr = type.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+                foreach (var type in assembly.GetTypes())
                 {
-                    yield return attr;
-                }
-
-                foreach (var prop in type.GetProperties())
-                {
-                    if ((attr = prop.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
+                    TypeDeclarationAttribute attr = null;
+                    if ((attr = type.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
                     {
-                        yield return attr;
+                        yield return (type, attr);
+                    }
+
+                    foreach (var prop in type.GetProperties())
+                    {
+                        if ((attr = prop.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
+                        {
+                            yield return (type, attr);
+                        }
+                    }
+
+                    foreach (var field in type.GetFields())
+                    {
+                        if ((attr = field.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
+                        {
+                            yield return (type, attr);
+                        }
                     }
                 }
-
-                foreach (var field in type.GetFields())
-                {
-                    if ((attr = field.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
-                    {
-                        yield return attr;
-                    }
-                }
-            }
         }
 
         private void OnGameInitialize(EventArgs args)

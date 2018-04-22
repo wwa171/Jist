@@ -1,3 +1,4 @@
+/// <reference path="./tshock.d.ts" />
 
 declare module 'cooldown' {
     /**

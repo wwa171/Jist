@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Jist.Next": {
+      "commandName": "Executable",
+      "executablePath": "C:\\src\\seconomy-next\\References\\TerrariaServer.exe",
+      "workingDirectory": "C:\\src\\seconomy-next\\References"
+    }
+  }
+}

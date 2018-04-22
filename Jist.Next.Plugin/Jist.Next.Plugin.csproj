@@ -26,12 +26,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jint.CommonJS" Version="1.0.12" />
+    <PackageReference Include="Jint.CommonJS" Version="1.0.14" />
     <PackageReference Include="Microsoft.CSharp" Version="4.4.1" />
   </ItemGroup>
 
-  <Target Name="AfterCompile" AfterTargets="PostBuildEvent">
-    <Message Importance="high" Text="Test Message" />
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="afterBuild" />
+    <!-- <Exec Command="xcopy /y $(TargetPath) $(SolutionDir)..\seconomy-next\References\ServerPlugins" /> -->
   </Target>
 </Project>
