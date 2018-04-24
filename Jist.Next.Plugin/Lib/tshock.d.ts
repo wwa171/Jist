@@ -5,6 +5,21 @@ declare namespace TShockAPI {
     static Players: TSPlayer[];
   }
 
+  class User {
+    ID: number;
+    Name: string;
+    Password: string;
+    UUID: string;
+    Group: string;
+    Registered: string;
+    LastAccessed: string;
+    KnownIps: string;
+
+    VerifyPassword(password: string): boolean;
+
+    CreateBCryptHash(password: string): void;
+  }
+
   class Commands {
     static ChatCommands: Command[];
     static Specifier: string;
@@ -97,7 +112,7 @@ declare namespace TShockAPI {
   }
 
   class TSPlayer {
-    static Server: TSPlayer;
+    static readonly Server: TSPlayer;
     static readonly All: TSPlayer;
 
     static FindByNameOrID(plr: string): TSPlayer[];
@@ -129,6 +144,8 @@ declare namespace TShockAPI {
     IsDisabledPendingTrashRemoval: boolean;
 
     IsLoggedIn: boolean;
+
+    User: User | undefined;
 
     /** Whether the player is muted or not. */
     mute: boolean;

@@ -54,7 +54,7 @@ namespace Jist.Next.Plugin.Lib
                 return 0;
             }
 
-            return (int)DateTime.Now.Subtract(entry.timeout).TotalSeconds;
+            return (int)entry.timeout.Subtract(DateTime.Now).TotalSeconds;
         }
 
     }

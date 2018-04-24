@@ -68,7 +68,7 @@ namespace Jist.Next.Plugin
                               isInternal
                           };
 
-            if (PaginationTools.TryParsePageNumber(args.Parameters, 1, args.Player, out var pageNumber))
+            if (PaginationTools.TryParsePageNumber(args.Parameters, 0, args.Player, out var pageNumber))
             {
                 PaginationTools.SendPage(args.Player, pageNumber, modules, modules.Count());
             }
@@ -117,7 +117,8 @@ namespace Jist.Next.Plugin
             WriteTypings("Jist.Next.Plugin.Lib.tshock.d.ts", "tshock.d.ts");
             WriteTypings("Jist.Next.Plugin.Lib.otapi.d.ts", "otapi.d.ts");
 
-            var types = from i in Assembly.GetExecutingAssembly().GetTypes()
+            var types = from asm in AppDomain.CurrentDomain.GetAssemblies()
+                        from i in asm.GetTypes()
                         let attr = i.GetCustomAttribute(typeof(ModuleAttribute), true) as ModuleAttribute
                         where attr != null
                         select new
