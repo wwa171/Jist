@@ -3,6 +3,16 @@
 declare namespace TShockAPI {
   class TShock {
     static Players: TSPlayer[];
+    static Groups: GroupManager;
+    static Utils: Utils;
+  }
+
+  class Utils {
+    GetBuffByName(name: string): number[];
+    GetBuffDescription(id: string): string;
+    GetBuffName(id: string): string;
+
+    [fn: string]: any;
   }
 
   class User {
@@ -111,6 +121,51 @@ declare namespace TShockAPI {
     KillWire4
   }
 
+  class Group {
+    permissions: string[];
+    negatedpermissions: string[];
+
+    R: number;
+    G: number;
+    B: number;
+
+    ChatColor: string;
+    ParentName: string;
+    Suffix: string;
+    Prefix: string;
+    Parent: Group;
+    Name: string;
+    TotalPermissions: string[];
+    Permissions: string;
+
+    AddPermission(permission: string): void;
+    AssignTo(otherGroup: Group): void;
+    HasPermission(permission: string): boolean;
+    NegatePermission(permission: string): void;
+    RemovePermission(permission: string): void;
+    SetPermission(permission: string[]): void;
+  }
+
+  class GroupManager {
+    public groups: Group[];
+
+    AddGroup(name: string, parentname: string, permissions: string, chatcolor: string): void;
+
+    AddPermissions(name: string, permissions: string[]): string;
+
+    DeleteGroup(name: string, exceptions: boolean): string;
+
+    DeletePermissions(name: string, permissions: string[]): string;
+
+    GetGroupByName(name: string): Group;
+
+    GroupExists(group: string): boolean;
+
+    LoadPermission(): void;
+
+    UpdateGroup(name: string, parentname: string, permissions: string, chatcolor: string, suffix: string, prefix: string): void;
+  }
+
   class TSPlayer {
     static readonly Server: TSPlayer;
     static readonly All: TSPlayer;
@@ -146,6 +201,8 @@ declare namespace TShockAPI {
     IsLoggedIn: boolean;
 
     User: User | undefined;
+
+    Group: Group;
 
     /** Whether the player is muted or not. */
     mute: boolean;

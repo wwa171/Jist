@@ -8,6 +8,9 @@ using Jint.Runtime.Interop;
 using TShockAPI;
 using Jint.CommonJS;
 using System.Collections.Generic;
+using TShockAPI.DB;
+
+using JistStatic = Jist.Next.Jist;
 
 namespace Jist.Next.Plugin
 {
@@ -76,7 +79,14 @@ namespace Jist.Next.Plugin
 
         private void OnJistReloadCommand(CommandArgs args)
         {
-            Reload();
+            var force = args.Parameters.ElementAtOrDefault(0) == "-f";
+
+            if (force)
+            {
+                args.Player.SendWarningMessage("jist-reload: -f used, I hope you know what you are doing...");
+            }
+
+            Reload(force);
             args.Player.SendInfoMessage("Jist reloaded.");
         }
 
@@ -99,10 +109,17 @@ namespace Jist.Next.Plugin
             Reload();
         }
 
-        protected void Reload()
+        protected void Reload(bool force = false)
         {
             Lib.Jist.ClearHooks();
             Lib.Timers.ClearAllTimers();
+            Lib.Commands.ClearCommands();
+
+            if (force)
+            {
+                JistStatic.transpileCache.Clear();
+            }
+        
             Jist.ModuleLoadingEngine.ModuleCache.Clear();
             LoadInternalModules();
             Jist.ModuleLoadingEngine.RunMain(JistRoot);
@@ -118,6 +135,7 @@ namespace Jist.Next.Plugin
             WriteTypings("Jist.Next.Plugin.Lib.otapi.d.ts", "otapi.d.ts");
 
             var types = from asm in AppDomain.CurrentDomain.GetAssemblies()
+                        where !asm.FullName.Contains("mscorlib") 
                         from i in asm.GetTypes()
                         let attr = i.GetCustomAttribute(typeof(ModuleAttribute), true) as ModuleAttribute
                         where attr != null
@@ -159,6 +177,7 @@ namespace Jist.Next.Plugin
             {
                 stream = attribute.Item1.Assembly.GetManifestResourceStream(attribute.Item2.ResourceId);
             }
+            
 
             //             if (stream == null)
             //             {
@@ -175,6 +194,11 @@ namespace Jist.Next.Plugin
             // declare module '{attribute.ModuleId}' {{ let m: any; export = m; }}"));
             //             }
 
+            if (stream == null)
+            {
+                throw new KeyNotFoundException($"Could not write typings for {attribute.Item2.TypingsFileName}: cannot locate stream in assembly {attribute.Item1.Assembly.GetName().Name}");
+            }
+
             using (var typingsStream = new StreamReader(stream))
             {
                 File.WriteAllText(typingsPath, typingsStream.ReadToEnd());
@@ -186,7 +210,7 @@ namespace Jist.Next.Plugin
         /// </summary>
         protected IEnumerable<(Type, TypeDeclarationAttribute)> GetTypingsAttributes()
         {
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies().Where(i => !i.FullName.Contains("mscorlib")))
                 foreach (var type in assembly.GetTypes())
                 {
                     TypeDeclarationAttribute attr = null;
@@ -195,21 +219,21 @@ namespace Jist.Next.Plugin
                         yield return (type, attr);
                     }
 
-                    foreach (var prop in type.GetProperties())
-                    {
-                        if ((attr = prop.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
-                        {
-                            yield return (type, attr);
-                        }
-                    }
+                    // foreach (var prop in type.GetProperties())
+                    // {
+                    //     if ((attr = prop.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
+                    //     {
+                    //         yield return (type, attr);
+                    //     }
+                    // }
 
-                    foreach (var field in type.GetFields())
-                    {
-                        if ((attr = field.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
-                        {
-                            yield return (type, attr);
-                        }
-                    }
+                    // foreach (var field in type.GetFields())
+                    // {
+                    //     if ((attr = field.GetCustomAttribute(typeof(TypeDeclarationAttribute)) as TypeDeclarationAttribute) != null)
+                    //     {
+                    //         yield return (type, attr);
+                    //     }
+                    // }
                 }
         }
 

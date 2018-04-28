@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
+using System.Security.Cryptography;
+using System.Text;
 using Jint;
 using Jint.CommonJS;
 using Jint.Native;
@@ -14,6 +16,8 @@ namespace Jist.Next
 {
     public class Jist
     {
+        public static Dictionary<int, string> transpileCache = new Dictionary<int, string>();
+
         public Engine Engine { get; internal set; } = new Jint.Engine(o =>
         {
         });
@@ -39,6 +43,7 @@ namespace Jist.Next
             var transpileModule = ts.Get("transpileModule");
             var asm = typeof(Jist).Assembly;
             var sourceCode = File.ReadAllText(path);
+            JsValue exports;
 
             var transpileConfig = new
             {
@@ -51,6 +56,18 @@ namespace Jist.Next
                 moduleName = module.Id,
                 fileName = Path.GetFileName(path),
             };
+
+            var sourceCodeHash = sourceCode.GetHashCode();
+
+            if (transpileCache.ContainsKey(sourceCodeHash))
+            {
+                var code = transpileCache[sourceCodeHash];
+                exports = (module as Module).Compile(code, path).AsObject();
+
+                module.Exports = exports;
+
+                return exports;
+            }
 
             var compileObject = transpileModule.Invoke(new JsValue[] { sourceCode, JsValue.FromObject(Engine, transpileConfig) }).AsObject();
             /*
@@ -97,7 +114,11 @@ namespace Jist.Next
                 throw new AggregateException(exceptions);
             }
 
-            var exports = (module as Module).Compile(compileObject.Get("outputText").AsString(), path).AsObject();
+            var outputText = compileObject.Get("outputText").AsString();
+            transpileCache.Add(sourceCode.GetHashCode(), outputText);
+
+            exports = (module as Module).Compile(outputText, path).AsObject();
+
             module.Exports = exports;
 
             return exports;
@@ -145,5 +166,21 @@ namespace Jist.Next
             ModuleLoadingEngine.FileExtensionParsers[".js"] = TranspileModule;
             ModuleLoadingEngine.FileExtensionParsers["default"] = TranspileModule;
         }
+        public string CalculateMD5Hash(string input)
+        {
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hash = md5.ComputeHash(inputBytes);
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+
+            return sb.ToString();
+        }
+
     }
 }
