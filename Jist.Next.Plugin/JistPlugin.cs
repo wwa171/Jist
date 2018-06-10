@@ -43,6 +43,8 @@ namespace Jist.Next.Plugin
 
             Jist = new Jist(JistRoot);
 
+            Jist.Engine.SetValue("Terraria", new NamespaceReference(Jist.Engine, "Terraria"));
+
             var mainFile = Path.Combine(JistRoot, "index.ts");
             if (!File.Exists(mainFile))
             {
@@ -133,6 +135,7 @@ namespace Jist.Next.Plugin
 
             WriteTypings("Jist.Next.Plugin.Lib.tshock.d.ts", "tshock.d.ts");
             WriteTypings("Jist.Next.Plugin.Lib.otapi.d.ts", "otapi.d.ts");
+            WriteTypings("Jist.Next.Plugin.Lib.terraria.d.ts", "terraria.d.ts");
 
             var types = from asm in AppDomain.CurrentDomain.GetAssemblies()
                         where !asm.FullName.Contains("mscorlib") 

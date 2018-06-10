@@ -175,4 +175,4 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
-Jist.Next.Plugin/BinReferences/jist/
+Jist.Next.Plugin/BinReferences

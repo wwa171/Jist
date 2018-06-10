@@ -166,6 +166,7 @@ namespace Jist.Next
             ModuleLoadingEngine.FileExtensionParsers[".js"] = TranspileModule;
             ModuleLoadingEngine.FileExtensionParsers["default"] = TranspileModule;
         }
+
         public string CalculateMD5Hash(string input)
         {
             MD5 md5 = System.Security.Cryptography.MD5.Create();

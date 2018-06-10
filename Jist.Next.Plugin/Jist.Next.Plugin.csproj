@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\index.ts" />
+    <EmbeddedResource Include="Lib\terraria.d.ts" />
     <EmbeddedResource Include="Lib\jist.d.ts" />
     <EmbeddedResource Include="Lib\tshock.d.ts" />
     <EmbeddedResource Include="Lib\otapi.d.ts" />

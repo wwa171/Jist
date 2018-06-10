@@ -1,4 +1,5 @@
 /// <reference path="otapi.d.ts" />
+/// <reference path="terraria.d.ts" />
 
 declare namespace TShockAPI {
   class TShock {
@@ -11,6 +12,14 @@ declare namespace TShockAPI {
     GetBuffByName(name: string): number[];
     GetBuffDescription(id: string): string;
     GetBuffName(id: string): string;
+
+    GetNPCByIdOrName(idOrName: string): Terraria.NPC[];
+    GetNPCById(id: number): Terraria.NPC;
+    GetNPCByName(name: string): Terraria.NPC[];
+
+    GetItemByIdOrName(text: string): Terraria.Item[];
+    GetItemById(id: number): Terraria.Item;
+    GetItemByName(name: string): Terraria.Item[];
 
     [fn: string]: any;
   }
@@ -458,11 +467,14 @@ declare namespace TShockAPI {
 
     /**
      * Gives an item to the player.
-     * @param type The item ID.
-     * @param stack The item stack.
-     * @param prefix The item prefix.
+		 * @param type The item's netID.
+		 * @param name The tiem's name.
+		 * @param width The item's width.
+		 * @param height The item's height.
+		 * @param stack The item's stack.
+		 * @param prefix The item's prefix.
      */
-    GiveItem(type: number, stack: number, prefix?: number): void;
+    GiveItem(type: number, name: string, width: number, height: number, stack: number, prefix: number): void;
 
     /**
      * Sends an information message to the player.

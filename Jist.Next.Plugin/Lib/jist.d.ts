@@ -70,6 +70,20 @@ declare namespace Jist {
 
     /** Generates a random number between the ranges specified, inclusive. */
     export function randomInclusive(from: number, to: number): number;
+
+    /**
+     * Gets a random clear tile within the specified range.
+     * Mapped to TShockAPI.Utils.GetRandomClearTileWithInRange.
+     * 
+     * @param x The starting X coordinate
+     * @param y The starting Y coordinate
+     * @param tileXRange The X range
+     * @param tileYRange The Y range
+     * 
+     * @returns a Point object containing the X and Y coordinates of the first clear tile within
+     * the parameters specified.
+     */
+    export function getRandomClearTileWithinRange(x: number, y: number, tileXRange: number, tileYRange: number): OTAPI.Point;
 }
 
 declare module 'jist' {

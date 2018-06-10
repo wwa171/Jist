@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Jint.Native;
 using Jint.Native.Function;
+using Microsoft.Xna.Framework;
 using TerrariaApi.Server;
 using TShockAPI;
 
@@ -112,6 +113,12 @@ namespace Jist.Next.Plugin.Lib
         public static int randomInclusive(int from, int to)
         {
             return threadSafeRandom.NextInclusive(from, to);
+        }
+
+        public static Point getRandomClearTileWithinRange(int startTileX, int startTileY, int tileXRange, int tileYRange)
+        {
+            TShock.Utils.GetRandomClearTileWithInRange(startTileX, startTileY, tileXRange, tileYRange, out int x, out int y);
+            return new Point(x, y);
         }
     }
 }
